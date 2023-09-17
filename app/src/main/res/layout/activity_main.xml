@@ -8,6 +8,13 @@
     android:padding="16dp"
     android:layout_gravity="center">
 
+
+    <Button
+        android:id="@+id/emptyBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp" />
     <!-- Blok 1 -->
     <Button
         android:id="@+id/block1"
@@ -125,23 +132,22 @@
         android:id="@+id/block15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="O"
+        android:text="pad"
         android:textSize="24sp" />
-
-    <!-- Blok Kosong -->
     <Button
-        android:id="@+id/emptyBlock"
+        android:id="@+id/block16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Pad"
         android:textSize="24sp" />
+    <!-- Blok Kosong -->
 
     <!-- Tombol Acak -->
     <Button
         android:id="@+id/buttonRandomize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Acak"
+        android:text="MULAI"
         android:textSize="18sp" />
 
 </GridLayout>

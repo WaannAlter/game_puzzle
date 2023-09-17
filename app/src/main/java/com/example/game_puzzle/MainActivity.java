@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private GridLayout gridLayout;
     private List<Button> buttons;
     private Button emptyBlock;
+    private final int gridSize = 4; // Ukuran grid (misalnya 4x4)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         emptyBlock = findViewById(R.id.emptyBlock);
 
         buttons = new ArrayList<>();
-        for (int i = 1; i <= 15; i++) {
+        for (int i = 1; i <= gridSize * gridSize - 1; i++) {
             int resID = getResources().getIdentifier("block" + i, "id", getPackageName());
             Button block = findViewById(resID);
             buttons.add(block);
@@ -80,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Periksa apakah dua blok bersebelahan
     private boolean isAdjacent(int index1, int index2) {
-        // Kode ini mengasumsikan grid ukuran 4x4, Anda dapat menyesuaikannya jika grid Anda berbeda
-        int gridSize = 4;
         int row1 = index1 / gridSize;
         int col1 = index1 % gridSize;
         int row2 = index2 / gridSize;
